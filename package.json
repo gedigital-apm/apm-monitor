@@ -1,0 +1,7 @@
+{
+  "name": "apm-monitor",
+  "version": "0.1.0",
+  "dependencies": {
+    "appdynamics": "^4.5.5"
+  }
+}
