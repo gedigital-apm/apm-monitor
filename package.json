@@ -3,6 +3,6 @@
   "version": "0.1.0",
   "dependencies": {
     "appdynamics": "^4.5.6",
-    "newrelic": "^4.10.0"
+    "newrelic": "^1.30.1"
   }
 }
