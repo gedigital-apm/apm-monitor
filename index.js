@@ -28,6 +28,7 @@ try {
         options.debug = valueOf(params.MONITORING_DEBUG, false);
     }
 
+    console.log("Starting AppDynamics application!");
     require("appdynamics").profile(options);
 }
 catch(e) {
