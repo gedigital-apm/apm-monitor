@@ -41,7 +41,7 @@ try {
         return;
     }
 
-    var vcap = params.VCAP_SERVICES;
+    var vcap = JSON.parse(params.VCAP_SERVICES);
     if (!vcap) {
         console.warn("VCAP_SERVICES unavailable. Application monitoring will be DISABLED.");
         return;
