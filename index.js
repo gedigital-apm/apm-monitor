@@ -4,7 +4,7 @@ function valueOf(param, defaultValue) {
     return (param === undefined) ? defaultValue : param;
 }
 
-var params = process.env;
+var params = process.env; console.log(JSON.stringify(process.env));
 
 if ((valueOf(params.MONITORING_ENABLED, "true") !== "true") ||
     (valueOf(params.APPDYNAMICS_ENABLED, "true") !== "true")) {
