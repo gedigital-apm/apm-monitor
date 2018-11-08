@@ -31,6 +31,8 @@ try {
     console.log("Starting AppDynamics application!");
     
     console.log("AppDynamics -- name: " + process.env.APPDYNAMICS_AGENT_ACCOUNT_NAME);
+    console.log("AppDynamics -- port: " + options.controllerPort);
+    console.log("AppDynamics -- ssl: " + options.controllerSslEnabled);
     console.log("AppDynamics -- host: " + process.env.APPDYNAMICS_CONTROLLER_HOST_NAME);
     console.log("AppDynamics -- appName: " + process.env.APPDYNAMICS_AGENT_APPLICATION_NAME);
     console.log("AppDynamics -- tier: " + process.env.APPDYNAMICS_AGENT_TIER_NAME);
