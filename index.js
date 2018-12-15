@@ -40,7 +40,7 @@ try {
     console.log("AppDynamics -- tier: " + process.env.APPDYNAMICS_AGENT_TIER_NAME);
     console.log("AppDynamics -- node: " + options.nodeName);
     
-    // require("appdynamics").profile(options);
+    require("appdynamics").profile(options);
 }
 catch(e) {
     console.error("Unable to enable application monitoring.");
