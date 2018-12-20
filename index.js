@@ -4,7 +4,7 @@ function valueOf(param, defaultValue) {
     return (param === undefined) ? defaultValue : param;
 }
 
-var params = process.env; console.log(JSON.stringify(process.env));
+var params = process.env;
 
 if ((valueOf(params.MONITORING_ENABLED, "true") !== "true") ||
     (valueOf(params.APPDYNAMICS_ENABLED, "true") !== "true")) {
@@ -27,18 +27,6 @@ try {
     if (!options.debug) {
         options.debug = valueOf(params.MONITORING_DEBUG, false);
     }
-
-    console.log("Starting AppDynamics application!");
-    
-    console.log("AppDynamics -- name: " + process.env.APPDYNAMICS_AGENT_ACCOUNT_NAME);
-    console.log("AppDynamics -- name: " + process.env.APPDYNAMICS_AGENT_ACCOUNT_ACCESS_KEY);
-    
-    console.log("AppDynamics -- port: " + options.controllerPort);
-    console.log("AppDynamics -- ssl: " + options.controllerSslEnabled);
-    console.log("AppDynamics -- host: " + process.env.APPDYNAMICS_CONTROLLER_HOST_NAME);
-    console.log("AppDynamics -- appName: " + process.env.APPDYNAMICS_AGENT_APPLICATION_NAME);
-    console.log("AppDynamics -- tier: " + process.env.APPDYNAMICS_AGENT_TIER_NAME);
-    console.log("AppDynamics -- node: " + options.nodeName);
     
     require("appdynamics").profile(options);
 }
