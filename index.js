@@ -21,13 +21,7 @@ try {
         debug:                valueOf(params.APPDYNAMICS_DEBUG,                  false),
         controllerPort:       valueOf(params.APPDYNAMICS_CONTROLLER_PORT,        443),
         controllerSslEnabled: valueOf(params.APPDYNAMICS_CONTROLLER_SSL_ENABLED, true),
-        nodeName:             valueOf(params.APPDYNAMICS_AGENT_NODE_NAME,        "process"),
-        logging: {
-            logfiles: [{
-            level: 'TRACE',
-            outputType: 'console'
-            }]
-        }
+        nodeName:             valueOf(params.APPDYNAMICS_AGENT_NODE_NAME,        "process")
     };
 
     if (!options.debug) {
