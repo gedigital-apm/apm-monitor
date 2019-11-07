@@ -1,6 +1,6 @@
 {
-  "name": "apm-monitor",
-  "version": "0.1.0",
+  "name": "@gedigital-apm/apm-monitor",
+  "version": "0.1.1",
   "dependencies": {
     "appdynamics": "4.5.20"
   }
