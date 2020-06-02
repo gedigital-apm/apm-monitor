@@ -36,6 +36,12 @@ try {
             ssl: valueOf(params.APPD_ANALYTICS_AGENT_SSL_ENABLED, false)
         }
     }
+
+    //for backwards compatibility:
+    //if APPD tier name env is present then set it else don't do anything
+    if (params.APPD_AGENT_TIER_NAME) {
+        options.tierName = valueOf(params.APPD_AGENT_TIER_NAME, null);
+    }
     
     require("appdynamics").profile(options);
 }
