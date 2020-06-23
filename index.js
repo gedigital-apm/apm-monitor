@@ -42,7 +42,7 @@ try {
     if (params.APPD_AGENT_TIER_NAME) {
         options.tierName = valueOf(params.APPD_AGENT_TIER_NAME, null);
     }
-    
+    console.log("Profile options for appdynamics: " + JSON.stringify(options));
     require("appdynamics").profile(options);
 }
 catch(e) {
